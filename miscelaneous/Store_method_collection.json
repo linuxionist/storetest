@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "2eeda8ec-88aa-4031-bf68-aa5f66a45d83",
+		"name": "Store Test Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Alcides",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "linuxionist@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "20793964",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Signin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzc5OGJlOGJhMzllZmJlZDhlNTc4MDhiY2ZlMTVhOGE3MTkyNTE1YmI4MDIwN2Q3MDZmYWVhOTVhNzgyZDk1M2MwMjZlZjYzYWQ1NjQ4OGIiLCJpYXQiOjE2MjE5MTUzNzAuODIyMDg0LCJuYmYiOjE2MjE5MTUzNzAuODIyMDk3LCJleHAiOjE2NTM0NTEzNzAuNTg3NzA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.aPGWrc2qlmYwdZq6evnr6ng2r2sjiuKcELrbx4o4RU82fEjesrFxHeIZB63PUG4wiG1LjdQ2uzrnai6u7ph_gAXNWBi1D9tQkqEdgY2W4aYYkPd_krH0nQwMj1SxkGixS3Dpwf7FB19v8N3xqKuMWUYzJdfsDyfW48mPjjZDSzHOaJhvTB4SKZ3KLTb6T788yjFpKOPsb5REsA4hf_SI4RxUkyFzQhudQC2jI-Q9pPWlohd5loe-5SLdSxRDY-vLfoWTfVcBmizi-ICfjTTvLpBOhDAs8D8FG_1o7P-GvCpcbtOI7TUvx49l0e3hFzOPL0DkVFFkt_jajXt_-AItIN0JKiDzJ1pWGjnX0Fzq-MKOYacQK8SW_qhULXEUHk4m4pbXYEUEysD5nD3QP5KG0CKgsn3cMtIBDUCPTdimrCap-kcHH_SuDfQOBaqVP-H1GAHAIrNRadcZESXKBoQ37QDHO-t-u1VbvWuV7Dwc_KezTILQhLG-XYwAG1D9O11Ijz7RERGJX1fFJPXgUIrHAG1Gxdz7TJXiDGR0h4Enctp45iCI1OKlbvvrBfHDXAEiH1YGw8NiG4m76k_xLhYZprCQhS7GXYVKeUI_3hMSU-OaLqQHIURsOTEmpL9eo1HkbsL1aInW9qmeNjhnFIzneF7aEbACNTornpY9nokq8yE",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{Laravel API Key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "linuxionist@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "20793964",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/signin?email=linuxionist@gmail.com&password=20793964",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signin"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "linuxionist@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "20793964"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2RiZWY5YzkzMzhlYjZjYjgxNDFiODVhMjljNTJkY2Q1ODlmYTA3ODk4MjY4YTFlMTA3NjU3MGRkNjJkMzQyNmQxY2Q5Nzk4YjM3ZDQxNGMiLCJpYXQiOjE2MzQwNjUwMzcuNjQ3Nzg0LCJuYmYiOjE2MzQwNjUwMzcuNjQ3ODA2LCJleHAiOjE2NjU2MDEwMzcuNTY1MDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.bxmimDaeldMdXE3WWXAHgJHl-Tukj_ArwcscIPqedk7UF-F20rJ6vf2htLVGf5LdARcLatQJTVla6owKb4Zbfrx6nbDxDMqNJ_YUVbDGiOd2MIDci-uXCjeN0FUeQFjPD9sY9oASnZLYsD5pFeE7FKYCZw9D6MFvcNVPh0ji8kJOyUMDqDGvHQGAOZGVcZgcNkV_YbSWjhcgi5qR5U77uDq82nxy4FB2dXiXSZ7Ewt5_YhPq8Xs5HCz6Qa6Lvk0ktfGzQTmTo8hJxoFi0GjrsXzLCd05vjIvW226qeJcZ7-SzwDgv5mOSIcGXFglNc6qsqnF20oYZDzktI7o3mf-sHw8ia-UKQryTJkKz8xtq_ug0ouSuP9IbLy2z4da_pNRePiWay3r0LI7QsOEu-cObmFLi05wdlXukhRWPoZ9no5_hPy6CtOINztkGN6kVWh2sB0q1BTTLvDZvP_04LzBdoeGehBySORHB8MdAYUbD0w0YKiJ5bL58Yvk-vCTGCrd81kuG5bn77Y19Wk85pNgY6LwIj8JyRiEVa32HxsC2gvd6z-v69tN8t4k-_l2oz0DgnBfbkfLaznVzY6tXnaSfUrG4Yh2s6DZ87miAvlPAAvVxltZD9KLMr3e3KXwUUUTbJSTJVaAaWX-lmvzKhWfIInh7OP_ltfEtaHYdm6c25o",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{Laravel API Key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "storename",
+							"value": "Makro",
+							"description": "`",
+							"type": "text"
+						},
+						{
+							"key": "storeaddress",
+							"value": "La Urbina",
+							"type": "text"
+						},
+						{
+							"key": "storephone",
+							"value": "1234567",
+							"type": "text"
+						},
+						{
+							"key": "storeemail",
+							"value": "makro@makro.com",
+							"type": "text"
+						},
+						{
+							"key": "storelocation",
+							"value": "0987654",
+							"type": "text"
+						},
+						{
+							"key": "storeimage",
+							"value": "test/image",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Stores",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2RiZWY5YzkzMzhlYjZjYjgxNDFiODVhMjljNTJkY2Q1ODlmYTA3ODk4MjY4YTFlMTA3NjU3MGRkNjJkMzQyNmQxY2Q5Nzk4YjM3ZDQxNGMiLCJpYXQiOjE2MzQwNjUwMzcuNjQ3Nzg0LCJuYmYiOjE2MzQwNjUwMzcuNjQ3ODA2LCJleHAiOjE2NjU2MDEwMzcuNTY1MDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.bxmimDaeldMdXE3WWXAHgJHl-Tukj_ArwcscIPqedk7UF-F20rJ6vf2htLVGf5LdARcLatQJTVla6owKb4Zbfrx6nbDxDMqNJ_YUVbDGiOd2MIDci-uXCjeN0FUeQFjPD9sY9oASnZLYsD5pFeE7FKYCZw9D6MFvcNVPh0ji8kJOyUMDqDGvHQGAOZGVcZgcNkV_YbSWjhcgi5qR5U77uDq82nxy4FB2dXiXSZ7Ewt5_YhPq8Xs5HCz6Qa6Lvk0ktfGzQTmTo8hJxoFi0GjrsXzLCd05vjIvW226qeJcZ7-SzwDgv5mOSIcGXFglNc6qsqnF20oYZDzktI7o3mf-sHw8ia-UKQryTJkKz8xtq_ug0ouSuP9IbLy2z4da_pNRePiWay3r0LI7QsOEu-cObmFLi05wdlXukhRWPoZ9no5_hPy6CtOINztkGN6kVWh2sB0q1BTTLvDZvP_04LzBdoeGehBySORHB8MdAYUbD0w0YKiJ5bL58Yvk-vCTGCrd81kuG5bn77Y19Wk85pNgY6LwIj8JyRiEVa32HxsC2gvd6z-v69tN8t4k-_l2oz0DgnBfbkfLaznVzY6tXnaSfUrG4Yh2s6DZ87miAvlPAAvVxltZD9KLMr3e3KXwUUUTbJSTJVaAaWX-lmvzKhWfIInh7OP_ltfEtaHYdm6c25o",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{Laravel API Key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2RiZWY5YzkzMzhlYjZjYjgxNDFiODVhMjljNTJkY2Q1ODlmYTA3ODk4MjY4YTFlMTA3NjU3MGRkNjJkMzQyNmQxY2Q5Nzk4YjM3ZDQxNGMiLCJpYXQiOjE2MzQwNjUwMzcuNjQ3Nzg0LCJuYmYiOjE2MzQwNjUwMzcuNjQ3ODA2LCJleHAiOjE2NjU2MDEwMzcuNTY1MDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.bxmimDaeldMdXE3WWXAHgJHl-Tukj_ArwcscIPqedk7UF-F20rJ6vf2htLVGf5LdARcLatQJTVla6owKb4Zbfrx6nbDxDMqNJ_YUVbDGiOd2MIDci-uXCjeN0FUeQFjPD9sY9oASnZLYsD5pFeE7FKYCZw9D6MFvcNVPh0ji8kJOyUMDqDGvHQGAOZGVcZgcNkV_YbSWjhcgi5qR5U77uDq82nxy4FB2dXiXSZ7Ewt5_YhPq8Xs5HCz6Qa6Lvk0ktfGzQTmTo8hJxoFi0GjrsXzLCd05vjIvW226qeJcZ7-SzwDgv5mOSIcGXFglNc6qsqnF20oYZDzktI7o3mf-sHw8ia-UKQryTJkKz8xtq_ug0ouSuP9IbLy2z4da_pNRePiWay3r0LI7QsOEu-cObmFLi05wdlXukhRWPoZ9no5_hPy6CtOINztkGN6kVWh2sB0q1BTTLvDZvP_04LzBdoeGehBySORHB8MdAYUbD0w0YKiJ5bL58Yvk-vCTGCrd81kuG5bn77Y19Wk85pNgY6LwIj8JyRiEVa32HxsC2gvd6z-v69tN8t4k-_l2oz0DgnBfbkfLaznVzY6tXnaSfUrG4Yh2s6DZ87miAvlPAAvVxltZD9KLMr3e3KXwUUUTbJSTJVaAaWX-lmvzKhWfIInh7OP_ltfEtaHYdm6c25o",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{Laravel API Key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/store/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2RiZWY5YzkzMzhlYjZjYjgxNDFiODVhMjljNTJkY2Q1ODlmYTA3ODk4MjY4YTFlMTA3NjU3MGRkNjJkMzQyNmQxY2Q5Nzk4YjM3ZDQxNGMiLCJpYXQiOjE2MzQwNjUwMzcuNjQ3Nzg0LCJuYmYiOjE2MzQwNjUwMzcuNjQ3ODA2LCJleHAiOjE2NjU2MDEwMzcuNTY1MDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.bxmimDaeldMdXE3WWXAHgJHl-Tukj_ArwcscIPqedk7UF-F20rJ6vf2htLVGf5LdARcLatQJTVla6owKb4Zbfrx6nbDxDMqNJ_YUVbDGiOd2MIDci-uXCjeN0FUeQFjPD9sY9oASnZLYsD5pFeE7FKYCZw9D6MFvcNVPh0ji8kJOyUMDqDGvHQGAOZGVcZgcNkV_YbSWjhcgi5qR5U77uDq82nxy4FB2dXiXSZ7Ewt5_YhPq8Xs5HCz6Qa6Lvk0ktfGzQTmTo8hJxoFi0GjrsXzLCd05vjIvW226qeJcZ7-SzwDgv5mOSIcGXFglNc6qsqnF20oYZDzktI7o3mf-sHw8ia-UKQryTJkKz8xtq_ug0ouSuP9IbLy2z4da_pNRePiWay3r0LI7QsOEu-cObmFLi05wdlXukhRWPoZ9no5_hPy6CtOINztkGN6kVWh2sB0q1BTTLvDZvP_04LzBdoeGehBySORHB8MdAYUbD0w0YKiJ5bL58Yvk-vCTGCrd81kuG5bn77Y19Wk85pNgY6LwIj8JyRiEVa32HxsC2gvd6z-v69tN8t4k-_l2oz0DgnBfbkfLaznVzY6tXnaSfUrG4Yh2s6DZ87miAvlPAAvVxltZD9KLMr3e3KXwUUUTbJSTJVaAaWX-lmvzKhWfIInh7OP_ltfEtaHYdm6c25o",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{Laravel API Key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "storename",
+							"value": "tessadssss",
+							"type": "text"
+						},
+						{
+							"key": "storeaddress",
+							"value": "sadasdasd",
+							"type": "text"
+						},
+						{
+							"key": "storephone",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "storeemail",
+							"value": "sadadas@dsadsa.com",
+							"type": "text"
+						},
+						{
+							"key": "storelocation",
+							"value": "sadasd",
+							"type": "text"
+						},
+						{
+							"key": "storeimage",
+							"value": "sadasda",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/store/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2RiZWY5YzkzMzhlYjZjYjgxNDFiODVhMjljNTJkY2Q1ODlmYTA3ODk4MjY4YTFlMTA3NjU3MGRkNjJkMzQyNmQxY2Q5Nzk4YjM3ZDQxNGMiLCJpYXQiOjE2MzQwNjUwMzcuNjQ3Nzg0LCJuYmYiOjE2MzQwNjUwMzcuNjQ3ODA2LCJleHAiOjE2NjU2MDEwMzcuNTY1MDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.bxmimDaeldMdXE3WWXAHgJHl-Tukj_ArwcscIPqedk7UF-F20rJ6vf2htLVGf5LdARcLatQJTVla6owKb4Zbfrx6nbDxDMqNJ_YUVbDGiOd2MIDci-uXCjeN0FUeQFjPD9sY9oASnZLYsD5pFeE7FKYCZw9D6MFvcNVPh0ji8kJOyUMDqDGvHQGAOZGVcZgcNkV_YbSWjhcgi5qR5U77uDq82nxy4FB2dXiXSZ7Ewt5_YhPq8Xs5HCz6Qa6Lvk0ktfGzQTmTo8hJxoFi0GjrsXzLCd05vjIvW226qeJcZ7-SzwDgv5mOSIcGXFglNc6qsqnF20oYZDzktI7o3mf-sHw8ia-UKQryTJkKz8xtq_ug0ouSuP9IbLy2z4da_pNRePiWay3r0LI7QsOEu-cObmFLi05wdlXukhRWPoZ9no5_hPy6CtOINztkGN6kVWh2sB0q1BTTLvDZvP_04LzBdoeGehBySORHB8MdAYUbD0w0YKiJ5bL58Yvk-vCTGCrd81kuG5bn77Y19Wk85pNgY6LwIj8JyRiEVa32HxsC2gvd6z-v69tN8t4k-_l2oz0DgnBfbkfLaznVzY6tXnaSfUrG4Yh2s6DZ87miAvlPAAvVxltZD9KLMr3e3KXwUUUTbJSTJVaAaWX-lmvzKhWfIInh7OP_ltfEtaHYdm6c25o",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{Laravel API Key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/store/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
